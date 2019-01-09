@@ -1,7 +1,7 @@
 var allPersons = [];
 
 var Person = {
-    lastName: "John",
+    firstName: "John",
     lastName : "Doe",
   };
 
