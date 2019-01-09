@@ -1,9 +1,6 @@
-var allPersons = [];
-
-
-
 window.onload = () => {
-
+    var allPersons =  JSON.parse(localStorage.getItem("allPersons"));
+    generateList(allPersons);
 }
 
 function generateList(tab) {
@@ -38,10 +35,8 @@ function addPerson() {
     firstName: name,
     lastName: lastname
   };
-  console.log(Person.firstName);
-  console.log(name);
   allPersons.push(Person);
-  
   generateList(allPersons);
+  localStorage.setItem("allPersons", JSON.stringify(allPersons));  
 }
 
