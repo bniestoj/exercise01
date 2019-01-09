@@ -16,3 +16,7 @@ function generateList(tab) {
 
 
 }
+
+function addPerson(){
+  alert('aaa');
+}
