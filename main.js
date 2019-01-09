@@ -1,15 +1,13 @@
 var allPersons = [];
 
-var Person = {
-  firstName: "John",
-  lastName: "Doe",
-};
+
 
 window.onload = () => {
 
 }
 
 function generateList(tab) {
+    var $ul = $('<ul></ul>');
     tab.sort(function (a, b) {
         if (a.lastName < b.lastName) {
             return -1;
@@ -19,8 +17,10 @@ function generateList(tab) {
         }
         return 0;
       });
+      $('ul').remove();
+      $('section').append($ul);
       for (var i =0; i <tab.length; i++){
-        $('ul').append('li').text(tab[i].firstName + ' ' + tab[i].lastName);
+        $('ul').append($("<li>").text(tab[i].firstName + ' ' + tab[i].lastName));
 
   }
 
@@ -38,7 +38,10 @@ function addPerson() {
     firstName: name,
     lastName: lastname
   };
+  console.log(Person.firstName);
+  console.log(name);
   allPersons.push(Person);
+  
   generateList(allPersons);
 }
 
