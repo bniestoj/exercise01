@@ -1,7 +1,7 @@
 var allPersons = [];
 
 var Person = {
-    firstName: "John",
+    lastName: "John",
     lastName : "Doe",
   };
 
@@ -11,10 +11,10 @@ window.onload = () => {
 
 function generateList(tab) {
     tab.sort(function (a, b) {
-        if (a.firstName < b.firstName) {
+        if (a.lastName < b.lastName) {
             return -1;
         }
-        if (a.firstName > b.firstName){
+        if (a.lastName > b.lastName){
             return 1;
         }
         return 0;
