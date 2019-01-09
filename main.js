@@ -19,8 +19,11 @@ function generateList(tab) {
         }
         return 0;
       });
+      for (var i =0; i <tab.length; i++){
+        $('ul').append('li').text(tab[i].firstName + ' ' + tab[i].lastName);
 
-      
+      }
+
 
 
 
